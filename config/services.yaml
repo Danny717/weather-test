@@ -22,3 +22,7 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\Client\WeatherClient:
+        arguments:
+            $apiKey: '%env(WEATHER_API_KEY)%'
+            $url: '%env(WEATHER_API_URL)%'
