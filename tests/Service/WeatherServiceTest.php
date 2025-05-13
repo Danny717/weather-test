@@ -38,7 +38,7 @@ JSON;
 
         $httpClient = new MockHttpClient($mockResponse);
         $logger = new NullLogger();
-        $client = new WeatherClient($httpClient, 'fake-key', 'fake-url');
+        $client = new WeatherClient($httpClient, 'fake-key', 'http://example.com');
         $service = new WeatherService($logger, $client);
 
         $weather = $service->getWeather('Berlin');
